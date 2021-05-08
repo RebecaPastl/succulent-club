@@ -1,0 +1,54 @@
+.navbar{
+    font-family: 'Yellowtail', 'Opens Sans', 'Montserrat', 'Helvetica', sans-serif;
+    font-size: 1.5rem;
+}
+
+
+.shadow{
+    box-shadow:  0 1rem 3rem 0.175rem #000000;
+}
+
+.green{
+    color:#677821;
+}
+
+.header-h1{
+    font-size:10vw;
+    opacity:75%;
+    -ms-transform: translateY(15%);
+    transform: translateY(15%);
+}
+
+/* font-face */
+
+h1, h2, .h1, .h2 {
+    font-family: 'Yellowtail', 'Opens Sans', 'Montserrat', 'Helvetica', sans-serif;
+}
+
+@media only screen and (max-width: 1800px) {
+    .arrow{
+        display: none;
+    }
+}
+
+@media only screen and (min-width: 1800px) {
+
+    .header-h1{
+        font-size:15vw;
+        -ms-transform: translateY(5%);
+        transform: translateY(5%);
+    }
+
+    .arrow{
+        animation:blinker 2s linear infinite; /* animation: name timming duration */
+        font-size: 5rem;
+    }
+    
+    @keyframes blinker {
+        50% {
+          opacity: 0;
+        }
+    }
+
+
+}
