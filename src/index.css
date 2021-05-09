@@ -1,15 +1,12 @@
+/* elements */
+
+body{
+    font-family:'Opens Sans', 'Montserrat', 'Helvetica', sans-serif;
+}
+
 .navbar{
     font-family: 'Yellowtail', 'Opens Sans', 'Montserrat', 'Helvetica', sans-serif;
     font-size: 1.5rem;
-}
-
-
-.shadow{
-    box-shadow:  0 1rem 3rem 0.175rem #000000;
-}
-
-.green{
-    color:#677821;
 }
 
 .header-h1{
@@ -17,6 +14,27 @@
     opacity:75%;
     -ms-transform: translateY(15%);
     transform: translateY(15%);
+}
+
+/* shape */
+
+.round-right{
+    border-top-right-radius:40% 50%;
+    border-bottom-right-radius:40% 50%;
+}
+
+/* colour */
+
+.green-header{
+    color:#677821;
+}
+
+.bg-green{
+    background-color:#ABC837;
+}
+
+.green{
+    color: #ABC837;
 }
 
 /* font-face */
