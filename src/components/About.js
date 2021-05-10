@@ -12,8 +12,8 @@ class About extends React.Component {
         return <>
             
             <Container className='bg-green' fluid>
-            <Row>
-                <Col className='d-none d-xl-block p-0 '>
+            <Row className='min-vh-50'>
+                <Col className='d-none d-xl-block p-0'>
                     <Image src="images/img-about.jpg" className='round-right h-100' fluid />
                 </Col>
                 <Col className='text-white text-center my-5' sm>

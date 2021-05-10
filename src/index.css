@@ -16,6 +16,10 @@ body{
     transform: translateY(15%);
 }
 
+.row{
+    min-height: 50vh;
+}
+
 /* shape */
 
 .round-right{
@@ -42,6 +46,8 @@ body{
 h1, h2, .h1, .h2 {
     font-family: 'Yellowtail', 'Opens Sans', 'Montserrat', 'Helvetica', sans-serif;
 }
+
+/* Medias */
 
 @media only screen and (max-width: 1800px) {
     .arrow{
