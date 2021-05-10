@@ -27,6 +27,11 @@ body{
     border-bottom-right-radius:40% 50%;
 }
 
+.round-left{
+    border-top-left-radius:40% 50%;
+    border-bottom-left-radius:40% 50%;
+}
+
 /* colour */
 
 .green-header{
