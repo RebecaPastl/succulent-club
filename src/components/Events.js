@@ -13,11 +13,11 @@ class Events extends React.Component {
         
         return <>
             
-            <Container className='bg-green' fluid>
+            <Container className='bg-green' id='events' fluid>
             <Row className='text-center g-3 justify-content-center'>
                 <Col className='text-white my-lg-5' sm={8}>
-                <h1 className='mb-0 ml-lg-5 mb-3 text-left'>Events</h1>
-                <div className='d-flex mt-5 align-items-center justify-content-center'>
+                <h1 className='ml-lg-5 mt-5 text-left'>Events</h1>
+                <div className='d-flex align-items-center justify-content-center'>
                     <CardDeck className='text-white mx-auto d-flex justify-content-center'>
                     <Card className='bg-green rounded-0 border-0 shadow mx-xl-5 my-5' style={{minWidth:150, maxWidth:150, height:150}}>
                         <Card.Body className='p-1 pt-2'>

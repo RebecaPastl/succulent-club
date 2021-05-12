@@ -7,6 +7,20 @@ import Contact from './components/Contact.js';
 import Footer from './components/Footer.js';
 
 class App extends React.Component {
+  
+  constructor(props) {
+       
+    super(props);
+
+    this.backToTop = this.backToTop.bind(this)
+             
+}
+
+  backToTop(){
+    document.body.scrollTop = 0;
+    document.documentElement.scrollTop = 0;
+  }
+  
   render() {
 
     return <>
@@ -15,7 +29,7 @@ class App extends React.Component {
       <Services />
       <Events />
       <Contact />
-      <Footer />
+      <Footer backToTop={this.backToTop}/>
     </>
   };
 }

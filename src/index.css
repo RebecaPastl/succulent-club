@@ -1,7 +1,12 @@
 /* elements */
 
+html {
+    scroll-behavior: smooth;
+}
+
 body{
     font-family:'Opens Sans', 'Montserrat', 'Helvetica', sans-serif;
+    padding-top: 4rem;
 }
 
 .navbar{
@@ -16,11 +21,7 @@ body{
     transform: translateY(15%);
 }
 
-/* .row{
-    min-height: 50vh;
-} */
-
-/* shape */
+/* effects */
 
 .round-right{
     border-top-right-radius:40% 50%;
@@ -30,6 +31,15 @@ body{
 .round-left{
     border-top-left-radius:40% 50%;
     border-bottom-left-radius:40% 50%;
+}
+
+.hover:hover{
+    transform: translate(0.1rem, 0.1rem);
+    -webkit-transform: translate(0.1rem, 0.1rem);
+    -ms-transform: translate(0.1rem, 0.1rem);
+    -o-transform: translate(0.1rem, 0.1rem);
+    cursor: pointer;
+    color: #677821;
 }
 
 /* colour */
