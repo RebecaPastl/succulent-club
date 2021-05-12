@@ -11,13 +11,13 @@ class About extends React.Component {
         
         return <>
             
-            <Container className='bg-green' fluid>
+            <Container className='bg-green' id='about' fluid>
             <Row className='min-vh-50'>
                 <Col className='d-none d-xl-block p-0'>
                     <Image src="images/img-about.jpg" className='round-right h-100' fluid />
                 </Col>
                 <Col className='text-white text-center my-5' sm>
-                    <h1 className='mb-0'>About</h1>
+                    <h1 className='mb-0 mt-5'>About</h1>
                     <div className='h-100 d-flex align-items-center'>
                         <p>
                         Lorem ipsum dolor sit amet, consectetur adipiscing elit. 

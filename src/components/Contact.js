@@ -12,9 +12,9 @@ class Services extends React.Component {
         
         return <>
             
-            <Container className='green bg-white' fluid>
-            <Row className='justify-content-center justify-content-lg-end'>
-                <h1 className='mr-5 mt-5'>Contact</h1>
+            <Container className='green bg-white' id='contact' fluid>
+            <Row className='pt-5 justify-content-center justify-content-lg-end'>
+                <h1 className='mr-5 mt-5 mb-0'>Contact</h1>
             </Row>
             <Row className='text-center g-3'>
                 <Col sm={8}>

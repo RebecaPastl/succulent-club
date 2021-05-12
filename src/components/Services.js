@@ -14,11 +14,11 @@ class Services extends React.Component {
         
         return <>
             
-            <Container className='bg-white' fluid>
+            <Container className='bg-white' id='services' fluid>
             <Row className='text-center g-3'>
                 {/* lg={{ order: 'last' }} changes the order of the cols in large screens */}
                 <Col className='green text-center my-5' sm={4} lg={{ order: 'last' }}>
-                    <h1 className='mb-0 mr-3 text-right'>Services</h1>
+                    <h1 className='mb-0 mt-5 mr-3 text-right'>Services</h1>
                     <div className='h-100 d-flex align-items-center'>
                         <p> Phasellus accumsan arcu bibendum neque semper, vel eleifend metus fringilla. 
                             Cras at dictum lacus. Lorem ipsum dolor sit amet, consectetur adipiscing elit.
