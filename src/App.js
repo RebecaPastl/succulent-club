@@ -4,6 +4,7 @@ import About from './components/About.js';
 import Services from './components/Services.js';
 import Events from './components/Events.js';
 import Contact from './components/Contact.js';
+import Footer from './components/Footer.js';
 
 class App extends React.Component {
   render() {
@@ -14,6 +15,7 @@ class App extends React.Component {
       <Services />
       <Events />
       <Contact />
+      <Footer />
     </>
   };
 }
