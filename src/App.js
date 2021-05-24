@@ -14,7 +14,7 @@ class App extends React.Component {
 
     this.backToTop = this.backToTop.bind(this)
              
-}
+  }
 
   backToTop(){
     document.body.scrollTop = 0;
