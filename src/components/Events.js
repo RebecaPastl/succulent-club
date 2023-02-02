@@ -4,8 +4,7 @@ import Row from 'react-bootstrap/Row';
 import Col from 'react-bootstrap/Col';
 import Image from 'react-bootstrap/Image';
 import Card from 'react-bootstrap/Card';
-import CardDeck from 'react-bootstrap/CardDeck';
-import { FaStore, FaHands, FaChalkboardTeacher, FaPagelines } from 'react-icons/fa';
+import { FaStore, FaChalkboardTeacher, FaPagelines } from 'react-icons/fa';
 
 class Events extends React.Component {
 
@@ -18,7 +17,6 @@ class Events extends React.Component {
                 <Col className='text-white my-lg-5' sm={8}>
                 <h1 className='ml-lg-5 mt-5 text-left'>Events</h1>
                 <div className='d-flex align-items-center justify-content-center'>
-                    <CardDeck className='text-white mx-auto d-flex justify-content-center'>
                     <Card className='bg-green rounded-0 border-0 shadow mx-xl-5 my-5' style={{minWidth:150, maxWidth:150, height:150}}>
                         <Card.Body className='p-1 pt-2'>
                             <Card.Title>
@@ -43,7 +41,6 @@ class Events extends React.Component {
                             <FaChalkboardTeacher size={80}/>
                         </Card.Body>
                     </Card>
-                    </CardDeck>
                 </div>
                 </Col>
                 <Col className='d-none d-xl-block p-0' sm={4}>

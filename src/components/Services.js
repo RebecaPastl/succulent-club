@@ -3,7 +3,6 @@ import Container from 'react-bootstrap/Container';
 import Row from 'react-bootstrap/Row';
 import Col from 'react-bootstrap/Col';
 import Card from 'react-bootstrap/Card';
-import CardDeck from 'react-bootstrap/CardDeck';
 import { FaBookOpen } from 'react-icons/fa';
 import { FaExchangeAlt } from 'react-icons/fa';
 import { FaNewspaper } from 'react-icons/fa';
@@ -26,9 +25,7 @@ class Services extends React.Component {
                     </div>
                 </Col>
                 <Col className='text-dark my-5' sm={8}>
-                <div className='h-100 d-flex align-items-center'>
-                    <CardDeck className='green mx-auto d-flex align-items-center'>
-                    <Card className='rounded-0 border-0 shadow mx-lg-5 my-5' style={{minWidth:190, maxWidth:190, height:190}}>
+                <div className='h-100 d-flex align-items-center'>                    <Card className='rounded-0 border-0 shadow mx-lg-5 my-5' style={{minWidth:190, maxWidth:190, height:190}}>
                         <Card.Body className='h-50 mw-50'>
                             <Card.Title>
                                 <h2>Library</h2>
@@ -52,7 +49,6 @@ class Services extends React.Component {
                             <FaNewspaper size={100}/>
                         </Card.Body>
                     </Card>
-                    </CardDeck>
                 </div>
                 </Col>
             </Row>
