@@ -25,31 +25,32 @@ class Services extends React.Component {
                     </div>
                 </Col>
                 <Col className='text-dark my-5' sm={8}>
-                <div className='h-100 d-flex align-items-center'>                    <Card className='rounded-0 border-0 shadow mx-lg-5 my-5' style={{minWidth:190, maxWidth:190, height:190}}>
-                        <Card.Body className='h-50 mw-50'>
-                            <Card.Title>
-                                <h2>Library</h2>
-                            </Card.Title>
-                            <FaBookOpen size={100}/>
-                        </Card.Body>
-                    </Card>
-                    <Card className='rounded-0 border-0 shadow mx-lg-5 my-5' style={{minWidth:190, maxWidth:190, height:190}}>
-                        <Card.Body>
-                            <Card.Title>
-                                <h2>Trades</h2>
-                            </Card.Title>
-                            <FaExchangeAlt size={100}/>
-                        </Card.Body>
-                    </Card>
-                    <Card className='rounded-0 border-0 shadow mx-lg-5 my-5' style={{minWidth:190, maxWidth:190, height:190}}    >
-                        <Card.Body>
-                            <Card.Title>
-                                <h2>News</h2>
-                            </Card.Title>
-                            <FaNewspaper size={100}/>
-                        </Card.Body>
-                    </Card>
-                </div>
+                    <div className='h-100 d-flex align-items-center justify-content-center'>                    
+                        <Card className='rounded-0 border-0 shadow mx-lg-5 my-5' style={{minWidth:190, maxWidth:190, height:190}}>
+                            <Card.Body className='h-50 mw-50'>
+                                <Card.Title>
+                                    <h2>Library</h2>
+                                </Card.Title>
+                                <FaBookOpen size={100}/>
+                            </Card.Body>
+                        </Card>
+                        <Card className='rounded-0 border-0 shadow mx-lg-5 my-5' style={{minWidth:190, maxWidth:190, height:190}}>
+                            <Card.Body>
+                                <Card.Title>
+                                    <h2>Trades</h2>
+                                </Card.Title>
+                                <FaExchangeAlt size={100}/>
+                            </Card.Body>
+                        </Card>
+                        <Card className='rounded-0 border-0 shadow mx-lg-5 my-5' style={{minWidth:190, maxWidth:190, height:190}}>
+                            <Card.Body>
+                                <Card.Title>
+                                    <h2>News</h2>
+                                </Card.Title>
+                                <FaNewspaper size={100}/>
+                            </Card.Body>
+                        </Card>
+                    </div>
                 </Col>
             </Row>
             </Container>
