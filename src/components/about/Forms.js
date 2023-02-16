@@ -7,7 +7,6 @@ import Button from 'react-bootstrap/Button';
 import Form from 'react-bootstrap/Form';
 
 import { CgClose } from 'react-icons/cg';
-import { Formik } from 'formik';
 
 class Forms extends React.Component {
 
@@ -61,27 +60,7 @@ class Forms extends React.Component {
 
                     {/* render form */}
                         
-                    <Formik 
-                        //validator schema imported from formValidators.js
-                        validationSchema={formValidators}
-                        // action taken after formik validates the form:
-                        onSubmit={this.submitFormData}
-                        // initial value of the form, needs to be set
-                        initialValues={{
-                            email:'',
-                            firstName:'',
-                            lastName:'',
-                            password:'',
-                            passwordRepeat:'',
-                        }}
-                    >
-                    {({
-                        handleSubmit, //formik built-in function
-                        handleChange, //formik built-in function
-                        values, //values handled by formik 
-                        touched, //when the user interact with the field (even if there is no typing)
-                        errors, //validation errors send by yup/formik
-                    }) => (
+                    
                         <Form 
                             className='w-100' 
                             noValidate 
@@ -183,8 +162,6 @@ class Forms extends React.Component {
                                 Register
                             </Button>
                         </Form>
-                    )}
-                    </Formik>
                 </div>
             </Col>
          </>;

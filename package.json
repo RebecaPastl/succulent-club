@@ -3,27 +3,16 @@
   "version": "0.1.0",
   "private": true,
   "dependencies": {
-    "bootstrap": "^5.0.0",
-    "formik": "^2.2.6",
-    "moment": "^2.29.1",
+    "bootstrap": "^5.2.3",
     "react": "^18.2.0",
-    "react-bootstrap": "^2.7.0",
+    "react-bootstrap": "^2.7.2",
     "react-dom": "^18.2.0",
-    "react-icons": "^4.2.0",
-    "react-router-dom": "^6.8.0",
-    "yup": "^0.32.9"
-  },
-  "devDependencies": {
+    "react-icons": "^4.7.1",
     "react-scripts": "^5.0.1"
   },
   "scripts": {
     "start": "react-scripts start",
     "build": "react-scripts build"
-  },
-  "eslintConfig": {
-    "extends": [
-      "react-app"
-    ]
   },
   "browserslist": {
     "production": [
@@ -36,7 +25,5 @@
       "last 1 firefox version",
       "last 1 safari version"
     ]
-  },
-  "postinstall": "echo 'export default {}' > node_modules/google-spreadsheet/node_modules/google-auth-library/build/src/index.js"
-
+  }
 }

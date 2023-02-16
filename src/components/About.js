@@ -1,6 +1,6 @@
 import React from 'react';
 import Greeting from './about/Greeting.js';
-import Forms from './about/Forms.js';
+//import Forms from './about/Forms.js';
 import Thanks from './about/Thanks.js';
 import Container from 'react-bootstrap/Container';
 import Row from 'react-bootstrap/Row';
@@ -73,7 +73,7 @@ class About extends React.Component {
         
         return <>
             
-                <Container className='bg-green' id='about' fluid>
+            <Container className='bg-green' id='about' fluid>
                 <Row className='min-vh-75 text-center g-3 d-flex justify-content-center'>
 
                     {/* render image in 1/3 of the width */}
@@ -85,17 +85,15 @@ class About extends React.Component {
                     {this.state.greeting &&
                         <Greeting showForm={this.showForm} />
                     }
-                    {this.state.formSuccess &&
+                    {/* {this.state.formSuccess &&
                         <Forms hideForm={this.hideForm} formSubmited={this.formSubmited} newUser={this.state.newUser} newEmail={this.state.newEmail}/>
-                    }
+                    } */}
                     {this.state.registerSuccess &&
                         <Thanks hideForm={this.hideForm} newUser={this.state.newUser} newEmail={this.state.newEmail}/>
                     }                    
                 </Row>
-                </Container>
+            </Container>
             
-
-
         </>;
     }
 }

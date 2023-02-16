@@ -12,7 +12,7 @@ class Header extends React.Component {
             <header>
                 <Navbar />
                 <Card className='border-0'>
-                    <Card.Img  src="./images/banner.jpg" alt='Succulent Club banner' fluid />
+                    <Card.Img  src="./images/banner.jpg" alt='Succulent Club banner' />
                     <Card.ImgOverlay> 
                         <Card.Title>
                             <h1 className='header-h1 green-header mx-5 mt-3 float-left text-center opacity-4'>Succulent <span className="d-block">Club</span></h1>
