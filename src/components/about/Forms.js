@@ -1,25 +1,23 @@
 import React from 'react';
 import { formValidators } from '../../validators/formValidators.js'
 import { saveForm } from '../../api/saveForm.js'
+import { useForm } from "react-hook-form";
+
 
 import Col from 'react-bootstrap/Col';
 import Button from 'react-bootstrap/Button';
 import Form from 'react-bootstrap/Form';
+import Row from 'react-bootstrap/Row';
 
 import { CgClose } from 'react-icons/cg';
 
-class Forms extends React.Component {
+function Forms(props) {
 
-    constructor(props) {
-
-        super(props);
-        
-        this.submitFormData = this.submitFormData.bind(this); // refers to this of Form
-
-    }
+    const { register, handleSubmit, watch, formState: { errors } } = useForm();
+    const onSubmit = data => console.log(data);
 
     // function that submits form data to saveForm.js and send name/email to parent component
-    submitFormData(e){
+    const submitFormData = (e) => {
 
         const data = {
             'First Name': e.firstName,
@@ -32,13 +30,14 @@ class Forms extends React.Component {
             //call saveForm.js (which saves into the spreadsheet)
             saveForm(data).then(res =>{
                 //if successful, send name and email to parent component
-                if (res === 'success'){ this.props.formSubmited(e.firstName, e.email); }
+                if (res === 'success'){ props.formSubmited(e.firstName, e.email); }
             })
         } catch (err) { console.log(err) }
       
     }
 
-    render() {
+
+
         
         return <>
             
@@ -50,7 +49,7 @@ class Forms extends React.Component {
                         className='text-white d-md-inline-block float-right' 
                         role="button"  
                         size={30} 
-                        onClick={this.props.hideForm}
+                        onClick={() => props.hideForm()}
                     />
 
                     {/* heading in the middle */}
@@ -64,7 +63,7 @@ class Forms extends React.Component {
                         <Form 
                             className='w-100' 
                             noValidate 
-                            onSubmit={handleSubmit}>
+                            onSubmit={() => handleSubmit(onSubmit)}>
                             
                             {/* email field */}
                             <Form.Group>
@@ -74,17 +73,10 @@ class Forms extends React.Component {
                                     placeholder="Enter e-mail" 
                                     size="sm" 
                                     name="email" 
-                                    value={values.email}
-                                    onChange={handleChange}
-                                    isValid={touched.email && !errors.email} //show valid sign if it was touched and there is no error
-                                    isInvalid={!!errors.email} //show error sign if there is an error
                                 />
-                                <Form.Control.Feedback className='text-white text-left' type="invalid">
-                                    {errors.email}
-                                </Form.Control.Feedback>
                             </Form.Group>
 
-                            <Form.Row>
+                            <Row className="my-3">
                                 {/* first name field */}
                                 <Form.Group as={Col}>
                                     <Form.Control 
@@ -92,14 +84,8 @@ class Forms extends React.Component {
                                         placeholder="Enter your name" 
                                         size="sm" 
                                         name="firstName" 
-                                        value={values.name}
-                                        onChange={handleChange}
-                                        isValid={touched.firstName && !errors.firstName}
-                                        isInvalid={!!errors.firstName}
                                     />
-                                    <Form.Control.Feedback className='text-white text-left' type="invalid">
-                                        {errors.firstName}
-                                    </Form.Control.Feedback>
+    
                                 </Form.Group>
 
                                 {/* last name field */}
@@ -109,18 +95,11 @@ class Forms extends React.Component {
                                         placeholder="Enter your surname name" 
                                         size="sm" 
                                         name="lastName" 
-                                        value={values.lastName}
-                                        onChange={handleChange}
-                                        isValid={touched.lastName && !errors.lastName}
-                                        isInvalid={!!errors.lastName}
                                     />
-                                    <Form.Control.Feedback className='text-white text-left' type="invalid">
-                                        {errors.lastName}
-                                    </Form.Control.Feedback>
                                 </Form.Group>
-                            </Form.Row>
+                            </Row>
 
-                            <Form.Row>
+                            <Row className="my-3">
                                 {/* password field */}
                                 <Form.Group as={Col}>
                                     <Form.Control 
@@ -129,14 +108,8 @@ class Forms extends React.Component {
                                         placeholder="Enter a password" 
                                         size="sm" 
                                         name="password" 
-                                        value={values.password}
-                                        onChange={handleChange}
-                                        isValid={touched.password && !errors.password}
-                                        isInvalid={!!errors.password}
                                     />
-                                    <Form.Control.Feedback className='text-white text-left' type="invalid">
-                                        {errors.password}
-                                    </Form.Control.Feedback>
+
                                 </Form.Group>
 
                                 {/* password confirmation field */}
@@ -147,16 +120,9 @@ class Forms extends React.Component {
                                         placeholder="Repeat password" 
                                         size="sm" 
                                         name="passwordRepeat" 
-                                        value={values.passwordRepeat}
-                                        onChange={handleChange}
-                                        isValid={touched.passwordRepeat && !errors.passwordRepeat}
-                                        isInvalid={!!errors.passwordRepeat}
                                     />
-                                    <Form.Control.Feedback className='text-white text-left' type="invalid">
-                                        {errors.passwordRepeat}
-                                    </Form.Control.Feedback>
                                 </Form.Group>
-                            </Form.Row>
+                            </Row>
 
                             <Button variant="outline-light shadow hover rounded-pill" type="submit">
                                 Register
@@ -165,7 +131,6 @@ class Forms extends React.Component {
                 </div>
             </Col>
          </>;
-    }
 }
   
 export default Forms;

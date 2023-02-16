@@ -1,6 +1,6 @@
-import React from 'react';
+import React, { useState } from 'react';
 import Greeting from './about/Greeting.js';
-//import Forms from './about/Forms.js';
+import Forms from './about/Forms.js';
 import Thanks from './about/Thanks.js';
 import Container from 'react-bootstrap/Container';
 import Row from 'react-bootstrap/Row';
@@ -8,68 +8,36 @@ import Col from 'react-bootstrap/Col';
 import Image from 'react-bootstrap/Image';
 
 
-class About extends React.Component {
+function About () {
 
-    constructor(props) {
-       
-        super(props);
-
-        this.state = {
-            greeting:true,
-            formSuccess: false,
-            registerSuccess: false,
-            newUser:'',
-            newEmail:'',
-        }
-    
-        this.showForm = this.showForm.bind(this)
-        this.hideForm = this.hideForm.bind(this)
-        this.formSubmited = this.formSubmited.bind(this)
-                 
-    }
+    const [greeting, setGreeting] = useState(true)
+    const [formSuccess, setFormSuccess] = useState(false)
+    const [registerSuccess, setRegisterSuccess] = useState(false)
+    const [newUser, setNewUser] = useState()
+    const [newEmail, setNewEmail] = useState()
 
     //function that opens form component
-    showForm(){
-
-        this.setState({
-            
-            greeting: false,
-            formSuccess: true,
-            registerSuccess: false,
-            
-        })
-
+    const showForm = () => {
+        setGreeting(false)
+        setFormSuccess(true)
+        setRegisterSuccess(false)
     }
 
     //function that shows greeting component when form is closed
-    hideForm(){
-
-        this.setState({
-            
-            greeting: true,
-            formSuccess: false,
-            registerSuccess: false,
-            
-        })
-
+    const hideForm = () => {
+        setGreeting(true)
+        setFormSuccess(false)
+        setRegisterSuccess(false)
     }
 
     // function that gets the new user name and email, and calls the thanks component
-    formSubmited(user, email){
-
-        this.setState({
-            
-            greeting: false,
-            formSuccess: false,
-            registerSuccess: true,
-            newUser:user,
-            newEmail:email,
-
-        })
-
+    const formSubmited = (user, email) => {
+        setGreeting(false)
+        setFormSuccess(false)
+        setRegisterSuccess(true)
+        setNewUser(user)
+        setNewEmail(email)
     }
-
-    render() {
         
         return <>
             
@@ -82,20 +50,19 @@ class About extends React.Component {
                     </Col>
 
                     {/* render one of the 3 components in the other 2/3 of the width*/}
-                    {this.state.greeting &&
-                        <Greeting showForm={this.showForm} />
+                    {greeting &&
+                        <Greeting showForm={showForm} />
                     }
-                    {/* {this.state.formSuccess &&
-                        <Forms hideForm={this.hideForm} formSubmited={this.formSubmited} newUser={this.state.newUser} newEmail={this.state.newEmail}/>
-                    } */}
-                    {this.state.registerSuccess &&
-                        <Thanks hideForm={this.hideForm} newUser={this.state.newUser} newEmail={this.state.newEmail}/>
+                    {formSuccess &&
+                        <Forms hideForm={hideForm} formSubmited={formSubmited} props={{newUser, newEmail}}/>
+                    }
+                    {registerSuccess &&
+                        <Thanks hideForm={hideForm} props={{newUser, newEmail}}/>
                     }                    
                 </Row>
             </Container>
             
         </>;
-    }
 }
   
 export default About;
