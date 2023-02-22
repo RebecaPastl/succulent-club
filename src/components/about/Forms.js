@@ -42,11 +42,11 @@ function Forms(props) {
         return <>
             
             {/* render form in the about component in another column */}
-            <Col className='text-white my-3 d-flex align-items-center justify-content-center' sm={8}>
-                <div className='w-100 bg-green shadow px-sm-5 p-3'>
+            <Col className='light-green-font my-3 d-flex align-items-center justify-content-center' sm={8}>
+                <div className='w-100 bg-dark-green shadow px-sm-5 p-3'>
                     {/* close button floating right */}
                     <CgClose 
-                        className='text-white d-md-inline-block float-right' 
+                        className='light-green-font d-md-inline-block float-right' 
                         role="button"  
                         size={30} 
                         onClick={() => props.hideForm()}

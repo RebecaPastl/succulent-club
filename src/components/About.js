@@ -41,7 +41,7 @@ function About () {
         
         return <>
             
-            <Container className='bg-green' id='about' fluid>
+            <Container className='bg-dark-green' id='about' fluid>
                 <Row className='min-vh-75 text-center g-3 d-flex justify-content-center'>
 
                     {/* render image in 1/3 of the width */}
@@ -59,6 +59,7 @@ function About () {
                     {registerSuccess &&
                         <Thanks hideForm={hideForm} props={{newUser, newEmail}}/>
                     }                    
+                
                 </Row>
             </Container>
             

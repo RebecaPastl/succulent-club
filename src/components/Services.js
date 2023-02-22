@@ -13,41 +13,47 @@ class Services extends React.Component {
         
         return <>
             
-            <Container className='bg-white' id='services' fluid>
+            <Container className='bg-light-green' id='services' fluid>
             <Row className='text-center g-3'>
                 {/* lg={{ order: 'last' }} changes the order of the cols in large screens */}
-                <Col className='green text-center my-5' sm={4} lg={{ order: 'last' }}>
-                    <h1 className='mb-0 mt-5 mr-3 text-right'>Services</h1>
+                <Col className='dark-green-font text-center my-5' sm={4} lg={{ order: 'last' }}>
+                    <h1 className='mb-0 mt-5 mr-3 text-center text-lg-right'>Services</h1>
                     <div className='h-100 d-flex align-items-center'>
                         <p> Phasellus accumsan arcu bibendum neque semper, vel eleifend metus fringilla. 
                             Cras at dictum lacus. Lorem ipsum dolor sit amet, consectetur adipiscing elit.
                         </p>
                     </div>
                 </Col>
-                <Col className='text-dark my-5' sm={8}>
-                    <div className='h-100 d-flex align-items-center justify-content-center'>                    
-                        <Card className='rounded-0 border-0 shadow mx-lg-5 my-5' style={{minWidth:190, maxWidth:190, height:190}}>
-                            <Card.Body className='h-50 mw-50'>
-                                <Card.Title>
-                                    <h2>Library</h2>
-                                </Card.Title>
-                                <FaBookOpen size={100}/>
+                <Col className='dark-green-font my-5' sm={8}>
+                    <div className='align-items-center justify-content-center'>                    
+                        <Card className='bg-light-green rounded-0 border-0 shadow mx-lg-5 my-5 d-block d-md-inline-block mx-auto' style={{minWidth:200, maxWidth:300, maxHeight:200}}>
+                            <Card.Body className='p-0'>
+                                <Card.Img variant='top' src='images/img-library.jpg' />
+                                <Card.ImgOverlay className='overlay p-0 d-flex align-items-center justify-content-center'>
+                                    <Card.Title className='my-0 w-100 bg-dark-green'>
+                                        <h3 className='my-1 light-green-font'>Library</h3>
+                                    </Card.Title>
+                                </Card.ImgOverlay>
                             </Card.Body>
                         </Card>
-                        <Card className='rounded-0 border-0 shadow mx-lg-5 my-5' style={{minWidth:190, maxWidth:190, height:190}}>
-                            <Card.Body>
-                                <Card.Title>
-                                    <h2>Trades</h2>
-                                </Card.Title>
-                                <FaExchangeAlt size={100}/>
+                        <Card className='bg-light-green rounded-0 border-0 shadow mx-lg-5 my-5 d-block d-md-inline-block mx-auto' style={{minWidth:200, maxWidth:300, maxHeight:200}}>
+                            <Card.Body className='p-0'>
+                                <Card.Img variant='top' src='images/img-trades.jpg' />
+                                <Card.ImgOverlay className='overlay p-0 d-flex align-items-center justify-content-center'>
+                                    <Card.Title className='my-0 w-100 bg-dark-green'>
+                                        <h3 className='my-1 light-green-font'>Trades</h3>
+                                    </Card.Title>
+                                </Card.ImgOverlay>
                             </Card.Body>
                         </Card>
-                        <Card className='rounded-0 border-0 shadow mx-lg-5 my-5' style={{minWidth:190, maxWidth:190, height:190}}>
-                            <Card.Body>
-                                <Card.Title>
-                                    <h2>News</h2>
-                                </Card.Title>
-                                <FaNewspaper size={100}/>
+                        <Card className='bg-light-green rounded-0 border-0 shadow mx-lg-5 my-5 d-block d-md-inline-block mx-auto' style={{minWidth:200, maxWidth:300, maxHeight:200}}>
+                            <Card.Body className='p-0'>
+                                <Card.Img variant='top' src='images/img-news.jpg' />
+                                <Card.ImgOverlay className='overlay p-0 d-flex align-items-center justify-content-center'>
+                                    <Card.Title className='my-0 w-100 bg-dark-green'>
+                                        <h3 className='my-1 light-green-font'>News</h3>
+                                    </Card.Title>
+                                </Card.ImgOverlay>
                             </Card.Body>
                         </Card>
                     </div>

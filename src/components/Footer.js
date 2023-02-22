@@ -8,10 +8,10 @@ class Footer extends React.Component {
         
         return <>
             
-            <footer className='shadow green bg-white p-3 text-center'>
+            <footer className='shadow dark-green bg-white p-3 text-center'>
                 <Button variant='white' onClick={this.props.backToTop}>
                     <img src="./images/succulent-club-logo.png" className='my-0 mx-2' height="50" width="50" alt="Succulent club logo" />
-                    <span className='h2 green-header align-bottom'>Succulent Club</span>
+                    <span className='h2 dark-green-font align-bottom'>Succulent Club</span>
                 </Button>
                 <div className='p-3 d-none d-md-inline-block float-right'>
                     <a className='green hover' href='https://github.com/RebecaPastl'> 

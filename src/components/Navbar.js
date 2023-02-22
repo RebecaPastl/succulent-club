@@ -10,7 +10,7 @@ class Navbar extends React.Component {
             <Bar collapseOnSelect className='navbar shadow' id='top' expand="lg" bg="white" variant="light" fixed='top'>
                 <Bar.Brand href="/">
                     <img src="./images/succulent-club-logo.png" className='my-0 mx-2 align-top' height="50" width="50" alt="Succulent club logo" />
-                    <span className='h2 green-header align-bottom'>Succulent Club</span>
+                    <span className='h2 dark-green-font align-bottom'>Succulent Club</span>
                 </Bar.Brand>
                 <Bar.Toggle aria-controls="responsive-navbar-nav" />
                 <Bar.Collapse className='text-center' id="responsive-navbar-nav">

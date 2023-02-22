@@ -1,3 +1,10 @@
+:root {
+    --primary-dark-colour: #738678;
+    --primary-light-colour: #daffe4;
+    --grey-colour: #5a5a5a;
+
+}
+
 /* elements */
 
 html {
@@ -39,21 +46,33 @@ body{
     -ms-transform: translate(0.1rem, 0.1rem);
     -o-transform: translate(0.1rem, 0.1rem);
     cursor: pointer;
-    color: #677821;
+    color: var(--primary-dark-colour);
 }
 
 /* colour */
 
-.green-header{
-    color:#677821;
+.dark-green-font{
+    color:var(--primary-dark-colour);
 }
 
-.bg-green{
-    background-color:#ABC837;
+.bg-dark-green{
+    background-color:var(--primary-dark-colour);
 }
 
-.green{
-    color: #ABC837;
+.dark-green{
+    color: var(--primary-dark-colour);
+}
+
+.light-green-font{
+    color:var(--primary-light-colour);
+}
+
+.bg-light-green{
+    background-color:var(--primary-light-colour);
+}
+
+.light-green{
+    color: var(--primary-light-colour);
 }
 
 /* font-face */
@@ -64,6 +83,15 @@ h1, h2,  .h1, .h2  {
 
 h3, h4, h5, h6, .h3, .h4, .h5, .h6 {
     font-family: 'Opens Sans', 'Montserrat', 'Helvetica', sans-serif;
+}
+
+/* Animation */
+
+.overlay:hover{
+    background-color:var(--grey-colour);
+    opacity: 0.7;
+    color: var(--primary-light-colour);
+
 }
 
 /* Medias */

@@ -12,33 +12,39 @@ class Events extends React.Component {
         
         return <>
             
-            <Container className='bg-green' id='events' fluid>
+            <Container className='bg-dark-green' id='events' fluid>
             <Row className='text-center g-3 justify-content-center'>
-                <Col className='text-white my-lg-5' sm={8}>
-                <h1 className='ml-lg-5 mt-5 text-left'>Events</h1>
-                <div className='d-flex align-items-center justify-content-center'>
-                    <Card className='bg-green rounded-0 border-0 shadow mx-xl-5 my-5' style={{minWidth:150, maxWidth:150, height:150}}>
-                        <Card.Body className='p-1 pt-2'>
-                            <Card.Title>
-                                <h2>Fairs</h2>
-                            </Card.Title>
-                            <FaStore size={80}/>
+                <Col className='light-green-font my-lg-5' sm={8}>
+                <h1 className='ml-lg-5 mt-5 text-center text-lg-left'>Events</h1>
+                <div className='align-items-center justify-content-center'>
+                    <Card className='rounded-0 border-0 shadow mx-lg-5 my-5 d-block d-md-inline-block mx-auto' style={{minWidth:200, maxWidth:300, maxHeight:200}}>
+                        <Card.Body className='p-0'>
+                            <Card.Img variant='top' src='images/img-fairs.jpg' />
+                            <Card.ImgOverlay className='overlay p-0 d-flex align-items-center justify-content-center'>
+                                <Card.Title className='my-0 w-100 bg-light-green'>
+                                    <h3 className='my-1 dark-green-font'>Fairs</h3>
+                                </Card.Title>
+                            </Card.ImgOverlay>
                         </Card.Body>
                     </Card>
-                    <Card className='bg-green rounded-0 border-0 shadow mx-xl-5 my-5' style={{minWidth:150, maxWidth:150, height:150}}>
-                        <Card.Body className='p-1 pt-2'>
-                            <Card.Title>
-                                <h2>Workshop</h2>
-                            </Card.Title>
-                            <FaPagelines size={80}/>
+                    <Card className='rounded-0 border-0 shadow mx-lg-5 my-5 d-block d-md-inline-block mx-auto' style={{minWidth:200, maxWidth:300, maxHeight:200}}>
+                        <Card.Body className='p-0'>
+                            <Card.Img variant='top' src='images/img-workshops.jpg' />
+                            <Card.ImgOverlay className='overlay p-0 d-flex align-items-center justify-content-center'>
+                                <Card.Title className='my-0 w-100 bg-light-green'>
+                                    <h3 className='my-1 dark-green-font'>Workshops</h3>
+                                </Card.Title>
+                            </Card.ImgOverlay>
                         </Card.Body>
                     </Card>
-                    <Card className='bg-green rounded-0 border-0 shadow mx-xl-5 my-5' style={{minWidth:150, maxWidth:150, height:150}}    >
-                        <Card.Body className='p-1 pt-2'>
-                            <Card.Title>
-                                <h2>Panel</h2>
-                            </Card.Title>
-                            <FaChalkboardTeacher size={80}/>
+                    <Card className='rounded-0 border-0 shadow mx-lg-5 my-5 d-block d-md-inline-block mx-auto' style={{minWidth:200, maxWidth:300, maxHeight:200}}>
+                        <Card.Body className='p-0'>
+                            <Card.Img variant='top' src='images/img-panels.jpg' />
+                            <Card.ImgOverlay className='overlay p-0 d-flex align-items-center justify-content-center'>
+                                <Card.Title className='my-0 w-100 bg-light-green'>
+                                    <h3 className='my-1 dark-green-font'>Panels</h3>
+                                </Card.Title>
+                            </Card.ImgOverlay>
                         </Card.Body>
                     </Card>
                 </div>

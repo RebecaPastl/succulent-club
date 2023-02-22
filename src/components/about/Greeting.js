@@ -9,7 +9,7 @@ class Greeting extends React.Component {
         
         return <>
 
-            <Col className='text-white text-center my-5' sm={4}>
+            <Col className='light-green-font text-center my-5' sm={4}>
                 <h1 className='display-4 my-4'>About</h1>
                 <p className='my-5'>
                     Lorem ipsum dolor sit amet, consectetur adipiscing elit. 
@@ -17,7 +17,7 @@ class Greeting extends React.Component {
                     Fusce malesuada nibh ac diam rhoncus, et dictum sapien ultricies.
                 </p>
             </Col>
-            <Col className='text-white my-5 d-flex align-items-center justify-content-center' sm={4}>
+            <Col className='light-green-font my-5 d-flex align-items-center justify-content-center' sm={4}>
                 <div>
                     <h3>Join Us</h3>
                     <p className='my-3'>
